@@ -39,12 +39,12 @@ neuron adex_gamma_E:
         E_L mV = -65.0 mV         # Leak reversal Potential (aka resting potential)
 
         # spike adaptation parameters
-        a nS = 4 nS             # Subthreshold adaptation
+        a nS = 4 nS               # Subthreshold adaptation
         b pA = 20 pA            # Spike-triggered adaptation
-        Delta_T mV = 2.0 mV     # Slope factor
+        Delta_T mV = 2.0 mV       # Slope factor
         tau_w ms = 500 ms       # Adaptation time constant
-        V_th mV = -50 mV        # Threshold Potential
-        V_peak mV = -40 mV      # Spike detection threshold
+        V_th mV = -40 mV        # Threshold Potential
+        V_peak mV = -30 mV          # Spike detection threshold
 
         #Reversal potential of synapses
 
@@ -52,12 +52,12 @@ neuron adex_gamma_E:
         E_i mV = -80 mV
 
         # Time decay constants
-        tau_decay_AMPA ms = 1 ms
+        tau_decay_AMPA ms = 1.5 ms
         tau_decay_GABA ms = 7.5 ms
 
         #NMDA paramters
 
-        Mg real = 1
+        Mg real = 1 
         tau_syn_rise_NMDA ms = 2 ms    # Synaptic time constant excitatory synapse
         tau_syn_decay_NMDA ms = 200 ms
 
@@ -70,7 +70,7 @@ neuron adex_gamma_E:
         g_NMDA_const real = 1 / (exp(-t_peak_NMDA / tau_syn_decay_NMDA) - exp(-t_peak_NMDA / tau_syn_rise_NMDA))
 
         # refractory time in steps
-
+        
         RefractoryCounts integer = steps(t_ref)
 
     input:
