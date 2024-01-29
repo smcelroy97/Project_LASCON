@@ -26,7 +26,7 @@ neuron adex_gamma_E:
 
         inline I_syn pA = I_AMPA + I_NMDA + I_GABA
 
-        V_m' = (-g_L * (V_bounded - E_L) + g_L * Delta_T * exp((V_bounded-V_th)/Delta_T) - w - I_syn + I_e) / C_m
+        V_m' = (-g_L * (V_bounded - E_L) + g_L * Delta_T * exp((V_bounded-V_th)/Delta_T) - w - I_syn + I_e + I_stim) / C_m
         w' = (a * (V_bounded - E_L) - w) / tau_w
 
 #parameters done
