@@ -55,7 +55,7 @@ neuron adex_gamma_E:
         tau_decay_AMPA ms = 1.5 ms
         tau_decay_GABA ms = 7.5 ms
 
-        #NMDA paramters
+        #NMDA parameters
 
         Mg real = 1 
         tau_syn_rise_NMDA ms = 2 ms    # Synaptic time constant excitatory synapse
